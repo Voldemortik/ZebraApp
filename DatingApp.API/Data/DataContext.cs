@@ -1,0 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using DatinApp.API.Model;
+
+namespace DatinApp.API.Data
+{
+    public class DataContext:DbContext
+    {
+        
+        public DataContext(DbContextOptions<DataContext> options):base(options)
+        {
+            
+        }
+        public  DbSet<Value> Values { get; set; }
+        
+    }
+}
