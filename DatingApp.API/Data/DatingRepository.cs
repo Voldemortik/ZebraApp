@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DatingApp.API.Model;
@@ -39,7 +40,8 @@ namespace DatingApp.API.Data
 
         public async Task<bool> SaveAll()
         {
-            return await _context.SaveChangesAsync() >  0;
+            
+            return await _context.SaveChangesAsync() >= 0 ;
         }
     }
 }
